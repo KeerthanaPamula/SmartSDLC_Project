@@ -8,17 +8,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Set browser tab title
 st.set_page_config(page_title="SmartSDLC", layout="wide")
-
-# Main App Title & Caption
 st.title("SmartSDLC")
 st.caption("AI Assistant for Software Development")
 
-# Tab layout
 tab1, tab2, tab3 = st.tabs(["📝 Requirement Analysis", "💻 Code Generation", "🧪 Test Case Generator"])
 
-# --- Tab 1: Requirement Analysis ---
 with tab1:
     st.subheader("Upload a PDF or Type a Prompt")
     prompt_input = st.text_area("Type your project idea or paste requirement text:")
@@ -38,7 +33,6 @@ with tab1:
             st.success("✅ Extracted Requirements:")
             st.code(result)
 
-# --- Tab 2: Code Generation ---
 with tab2:
     st.subheader("Generate Frontend/Backend Code")
     requirements = st.text_area("Enter feature requirements:")
@@ -50,7 +44,6 @@ with tab2:
         st.success("✅ Generated Code:")
         st.code(result)
 
-# --- Tab 3: Test Case Generator ---
 with tab3:
     st.subheader("Generate Test Cases from Code or Requirements")
     test_input = st.text_area("Paste your code or requirements:")

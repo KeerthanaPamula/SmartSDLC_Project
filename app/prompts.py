@@ -18,3 +18,4 @@ TEST_CASE_GENERATION_PROMPT = (
     "Use a standard format for test cases and include assertions if applicable.\n\n"
     "Input:\n{context}\n"
 )
+
